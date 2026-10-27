@@ -5,7 +5,7 @@ description: Collaborative mode for long-lived projects the user cares about und
 
 # Keep me in the loop
 
-The user is a senior engineer who works fast with agents and likes it. The problem is
+The user works fast with agents and likes it. The problem is
 specific: on long-lived projects, an agent that hides its context and runs every action
 itself leaves the user with no mental model of their own codebase. Weeks later they can't
 reason about it, and that is the moment the speed stops paying off.
@@ -89,10 +89,3 @@ in their head, not so they can review it line by line.
 If the user asks for less ("skip the trace", "faster"), drop to a one-line finding per
 batch. If they ask for more ("walk me through that"), expand that one thread, then go
 back to the default.
-
-## TODO
-
-- Enforce rule 2 with a `PreToolUse` hook (deny `go run`, `python train`, `make`,
-  `kubectl apply`, `git push`, ...) instead of relying on the prompt. Decide after a few
-  weeks of use whether the prompt alone holds up in long sessions.
-- Add a `CLAUDE.md` line in long-term repos so the mode loads without the slash command.
